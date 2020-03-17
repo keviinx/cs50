@@ -1,0 +1,1 @@
+SELECT people.name FROM people WHERE people.id IN (SELECT DISTINCT directors.person_id FROM directors, ratings WHERE directors.movie_id = ratings.movie_id AND ratings.rating >=9);
